@@ -1,0 +1,160 @@
+html, body {
+   margin: 0;
+ }
+
+.container {
+   margin: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: url('../images/loginbg1.jpg') no-repeat center center fixed;
+   background-size: cover;
+   color: white;
+}
+
+   .signup-form {
+      margin: auto;
+      width: 70vw;
+      height: 70vh;
+      background-color: rgba(0, 0, 0, .3);
+      display: flex;
+      flex-wrap: wrap;
+      border-radius: 3rem;
+   }
+
+.site-name {
+   flex: 1;
+   min-width: 300px;
+   margin: auto;
+   padding-left: 10rem;
+}
+.site-name h1{
+   font-size: 10rem;
+}
+.site-name p{
+   font-size: 4rem;
+   margin-bottom: 5rem;
+}
+
+.social-medias a{
+   font-size: 4rem;
+   padding-right: 4rem;
+   color: white;
+}
+
+.signup {
+   flex: 1.5;
+   min-width: 300px;
+   display: flex;
+   flex-direction: column;
+   align-items: center; 
+   justify-content: center;
+   padding: 6rem 1rem;
+} 
+
+.signup > * {
+   font-size: 3.5rem;
+   flex: 1;
+   margin: 0.5rem 0;
+   width: 80%;
+}
+
+.roles {
+   display: flex;
+   justify-content: space-between;
+   height: 8rem;
+}
+.roles > *{
+   width: 30%;
+   height: 5rem;
+   min-height: 30px;
+   margin-bottom: 2rem;
+   font-size: 3rem;
+   font-weight: 500  ;
+   font-family: Beiruti,arial;
+   border: none;
+   border-radius: 100rem;
+   color: #005449;
+}
+.roles > *:hover{
+   background-color: #c6deda;
+   border: .3rem solid white;
+   color: #005449;
+}
+.roles .selected-role{
+   background-color: #005449;
+   border: .3rem solid white;
+   color: white;
+}
+
+.input-field{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.input-field > input{
+   margin: 2rem 0rem;
+   height: 80%;
+   width: 70%;
+   font-family: Beiruti,arial;
+   font-size: 3rem;
+   padding: 0  2rem;
+   margin-left: 2rem;
+   border: .3rem solid rgba(0, 0, 0, 0);
+   border-radius: 100rem;
+   background-color: rgba(0, 0, 0, 0);
+   color: white;
+   outline: none;
+}
+.input-field>input:hover{
+   border: .3rem solid rgb(166, 166, 166);
+}
+.input-field>input:focus{
+   border: .3rem solid white;
+}
+.login-field > input{
+   height: 70%;
+}
+.login-field{
+   margin-top: 5rem;
+}
+
+.submit-btn{
+   display: block;
+   margin: auto;
+   margin-top: 3rem;
+   width: 20rem;
+   height: 5rem;
+   background-color: white ;
+   border-radius: 4rem;
+   border: .3rem solid white;
+   color: #005449;
+   font-family: Beiruti,arial;
+   font-size: 3.5rem;
+   font-weight: 500;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+.submit-btn:hover{
+   background-color: #005449;
+   color: white;
+}
+.login-btn{
+   margin-top: 5rem;
+}
+
+.error{
+   color: red;
+   text-align: center;
+   margin-top: 2rem;
+}
+.not-error{
+   text-align: center;
+   margin-top: 2rem;
+}
+.not-error a{
+   color: white;
+   text-decoration: none;
+   padding-left: 1rem;
+}

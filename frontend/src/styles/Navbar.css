@@ -1,0 +1,61 @@
+body {
+   background-color: #161e1e;
+}
+
+.navbar {
+   border: .5rem solid #EEEEEE;
+   margin: 1%;
+   background-color: #00433a;
+   border-radius: 20rem;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   color: #EEEEEE;
+   font-size: 3.5rem;
+   padding: 1rem;
+}
+
+.sitename{
+   font-size: 8rem;
+   padding-left: 4rem;
+   flex: 1.2;
+}
+.navlinks{
+   flex: 3;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: left;
+}
+.navlinks a{
+   color: white;
+   text-decoration: none;
+   padding: .5rem 2rem;
+   margin: 0 2rem;
+}
+.navlinks .cur-location{
+   background-color: white;
+   border-radius: 10rem;
+   font-weight: 500;
+   color: #008170;
+}
+.profile{
+   flex: 1;
+   padding-right: 0rem;
+   display: flex;
+   align-items: center;
+   justify-content: right;
+}
+.profile span{
+   padding-right: 2rem;
+}
+.profile button{
+   height: 10rem;
+   width: 10rem;
+   font-size: 8rem;
+   padding: .5rem;
+   background-color: rgba(0, 0, 0, 0);
+   border: none;
+   color: white;
+   cursor: pointer;
+}

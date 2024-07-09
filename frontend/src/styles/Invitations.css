@@ -1,0 +1,53 @@
+.invites-container {
+   display: flex;
+   flex-direction: column;
+}
+.invite-card{
+   background-color: #008170;
+   color: white;
+   font-size: 3rem;
+   padding: 1rem 1rem 1rem 4rem ;
+   margin: 1% 2%;
+   display: flex;
+   justify-content: space-between;
+   border-radius: 40rem;
+   transition: transform 0.3s ease;
+}
+.invite-card .details{
+   flex: 8;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin: 0 3%;
+}
+.invite-card .details h2{
+   font-size: 5rem;
+   font-weight: 500;
+   padding-right: 10rem;
+}
+.invite-card .btns{
+   flex: 1;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.btns button{
+   cursor: pointer;
+   border: none;
+   font-size: 4rem;
+   border-radius: 10rem;
+   background-color: rgba(0, 0, 0, 0);
+   height: 7rem;
+   width: 7rem;
+   color: white;
+   transition: transform .3s ease,color .3s ease , background-color .3s ease;
+}
+.btns button .fa-check{
+   font-size: 4.5rem;
+}
+.btns button:hover{
+   transform: scale(1.1);
+   background-color: white;
+   color: #008170;
+}
