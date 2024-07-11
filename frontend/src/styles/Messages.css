@@ -37,20 +37,11 @@
    flex: 4;
    border: .5rem solid white;
    border-radius: 3rem;
-   padding: 1rem 2rem;
+   padding: 1rem .5rem;
    height: 70vh;
    display: flex;
    align-items: center;
    justify-content: center;
-   overflow: auto;
-   &::-webkit-scrollbar {
-      width: 2rem;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: #008170;
-      border: .3rem solid white;
-      border-radius: 10rem;
-    }
 }
 .chat-container .no-receiver{
    font-size: 10rem;
@@ -63,7 +54,20 @@
    width: 100%;
    height: 100%;
    display: flex;
+   padding: 0 1rem;
    flex-direction: column;
+   overflow: auto;
+   /* background-color: lime; */
+   border-top-left-radius: 4rem;
+   border-top-right-radius: 4rem;
+   &::-webkit-scrollbar {
+      width: 1.5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #008170;
+      border: 0.2rem solid white;
+      border-radius: 10rem;
+    }
 }
 .chats p{
    display: inline;

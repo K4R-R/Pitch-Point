@@ -60,11 +60,12 @@
    color: #008170;
    background-color: #c6deda;
    border-radius: 20rem;
-   transition: background-color 0.3s ease, color 0.3s ease;
+   transition: background-color 0.3s ease, color 0.3s ease,transform .3s ease;
    min-width: 15rem;
 }
 .add-blog button:hover{
    background-color: #008170;
    color: white;
    transition-delay: .1s;
+   transform: scale(1.1);
 }
