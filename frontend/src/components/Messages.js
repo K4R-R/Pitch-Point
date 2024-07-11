@@ -55,7 +55,7 @@ const Messages = () => {
    },[user,apiUrl]);
 
    const scrollToBottom = () => {
-      const chatContainer = document.querySelector('.chat-container');
+      const chatContainer = document.querySelector('.chats');
       if (chatContainer) {
          chatContainer.scrollTop = chatContainer.scrollHeight;
       }
