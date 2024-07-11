@@ -17,7 +17,7 @@ html, body {
    .signup-form {
       margin: auto;
       width: 70vw;
-      height: 70vh;
+      height: 75vh;
       background-color: rgba(0, 0, 0, .3);
       display: flex;
       flex-wrap: wrap;
