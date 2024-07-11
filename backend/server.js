@@ -14,7 +14,7 @@ const chatRoutes = require('./routes/chatRoutes');
 
 const io = require('socket.io')(http, {
    cors: {
-     origin: "http://localhost:3000",
+     origin: "https://master--pitch-point.netlify.app",
      methods: ["GET", "POST"]
    }
  });
