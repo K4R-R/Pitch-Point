@@ -14,7 +14,7 @@ const chatRoutes = require('./routes/chatRoutes');
 
 const io = require('socket.io')(http, {
    cors: {
-     origin: ["https://pitch-point.netlify.app","wss://pitch-point-frontend.onrender.com"],
+     origin: ["https://pitch-point.netlify.app","https://pitch-point-frontend.onrender.com"],
      methods: ["GET", "POST"]
    }
  });
