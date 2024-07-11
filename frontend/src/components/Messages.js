@@ -12,9 +12,10 @@ const Messages = () => {
    const [socket,setSocket] = useState(null);
    const [message, setMessage] = useState('');
    const [chats, setChats] = useState(null);
+   const apiUrl = process.env.REACT_APP_API_URL;
 
    useEffect( ()=> {
-      const newSocket = io('http://localhost:4000/');
+      const newSocket = io(apiUrl);
       setSocket(newSocket);
 
       newSocket.on('connect', () => {
@@ -22,7 +23,7 @@ const Messages = () => {
       });
 
       const fetchConnections = async() => {
-         const res = await fetch('http://localhost:4000/api/connections',{
+         const res = await fetch(`${apiUrl}/api/connections`,{
                headers: {
                   'Authorization':`Bearer ${user.token}`
                }
@@ -34,7 +35,7 @@ const Messages = () => {
       }
 
       const fetchChats = async () => {
-         const res = await fetch(`http://localhost:4000/api/chat/${user.email}`,{
+         const res = await fetch(`${apiUrl}/api/chat/${user.email}`,{
             headers: {
                'Authorization':`Bearer ${user.token}`
             }
@@ -51,7 +52,17 @@ const Messages = () => {
          newSocket.disconnect();
          console.log('Disconnected from the server');
       };
-   },[user]);
+   },[user,apiUrl]);
+
+   const scrollToBottom = () => {
+      const chatContainer = document.querySelector('.chat-container');
+      if (chatContainer) {
+         chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+   };
+
+   useEffect(() => { scrollToBottom() }, [chats]);
+   
 
    if(chats) {
       socket.on('messageReceived', (message) => {
@@ -68,7 +79,7 @@ const Messages = () => {
 
       // console.log(message);   
 
-      const res = await fetch('http://localhost:4000/api/chat/add',{
+      const res = await fetch(`${apiUrl}/api/chat/add`,{
          method:'POST',
          body: JSON.stringify({senderEmail:user.email,receiverEmail:receiver,message}),
          headers: {

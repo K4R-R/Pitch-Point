@@ -21,7 +21,7 @@ html, body {
       background-color: rgba(0, 0, 0, .3);
       display: flex;
       flex-wrap: wrap;
-      border-radius: 3rem;
+      border-radius: 10rem;
    }
 
 .site-name {
@@ -40,7 +40,8 @@ html, body {
 
 .social-medias a{
    font-size: 4rem;
-   padding-right: 4rem;
+   margin-right: 4rem;
+   padding: 0rem;
    color: white;
 }
 

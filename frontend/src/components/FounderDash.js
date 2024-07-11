@@ -10,10 +10,11 @@ const FounderDash = () => {
    const [production,setProduction] = useState('PRODUCTION STAGE');
    const [customer,setCustomer] = useState('CUSTOMER GROUP');
    const {user} = useAuthContext();
+   const apiUrl = process.env.REACT_APP_API_URL;
 
    useEffect(() => {
       const fetchBusiness = async () => {
-         const res = await fetch('http://localhost:4000/api/founder/business',{
+         const res = await fetch(`${apiUrl}/api/founder/business`,{
             headers: {
                'Authorization':`Bearer ${user.token}`
             }
@@ -33,7 +34,7 @@ const FounderDash = () => {
       }
 
       fetchBusiness();
-    }, [user]);
+    }, [user,apiUrl]);
 
    const industries = ["Technology", "Finance", "Healthcare", "Education", "Manufacturing", "Retail", "Transportation", "Construction", "Energy", "Telecommunications", "Agriculture", "Entertainment", "Real Estate", "Hospitality", "Food & Beverage"];
    const investments = ["Seed", "Pre-Seed", "Series A", "Series B", "Series C", "IPO"];
@@ -50,7 +51,7 @@ const FounderDash = () => {
       if(production==='PRODUCTION STAGE') return alert('Please Select Production Stage');
       if(customer==='CUSTOMER GROUP') return alert('Please Select Customer Group');
 
-      const res = await fetch('http://localhost:4000/api/founder/business',{
+      const res = await fetch(`${apiUrl}/api/founder/business`,{
          method:'POST',
          body: JSON.stringify({industry,startupName,investmentStage:investment,productionStage:production,customerGroup:customer}),
          headers: {

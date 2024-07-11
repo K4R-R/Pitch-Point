@@ -12,6 +12,7 @@ const InvestorDash = () => {
   const [production,setProduction] = useState([]);
   const [customer,setCustomer] = useState([]);
   const {user} = useAuthContext();
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   
   const types = ["Angel", "Venture Capitalist", "Private Equity", "Crowdfunding", "Corporate", "Family Office", "Accelerator/Incubator", "Government", "Individual", "Other"];
@@ -22,7 +23,7 @@ const InvestorDash = () => {
 
   useEffect(() => {
     const fetchInvestPref = async () => {
-        const res = await fetch('http://localhost:4000/api/investor',{
+        const res = await fetch(`${apiUrl}/api/investor`,{
             headers: {
               'Authorization':`Bearer ${user.token}`
             }
@@ -42,7 +43,7 @@ const InvestorDash = () => {
     }
 
     fetchInvestPref();
-  }, [user]);
+  }, [user,apiUrl]);
 
   const handleClick = (item, selectedArray, setSelectedArray) => {
     if (selectedArray.includes(item)) {
@@ -63,7 +64,7 @@ const InvestorDash = () => {
       return alert('Range Cannot be Zero');
     }
 
-    const res = await fetch('http://localhost:4000/api/investor',{
+    const res = await fetch(`${apiUrl}/api/investor`,{
         method:'POST',
         body: JSON.stringify({investorType:type,investmentRange:range,industry,investmentStage:investment,productionStage:production,customerGroup:customer}),
         headers: {

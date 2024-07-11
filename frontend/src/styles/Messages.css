@@ -11,7 +11,7 @@
 .user-container{
    margin-right: 1%;
    border: .5rem solid white;
-   border-radius: 5rem;
+   border-radius: 3rem;
    padding: 1rem 2rem;
    height: 70vh;
    flex: 1;
@@ -36,16 +36,25 @@
 .chat-container{
    flex: 4;
    border: .5rem solid white;
-   border-radius: 5rem;
+   border-radius: 3rem;
    padding: 1rem 2rem;
    height: 70vh;
    display: flex;
    align-items: center;
    justify-content: center;
+   overflow: auto;
+   &::-webkit-scrollbar {
+      width: 2rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #008170;
+      border: .3rem solid white;
+      border-radius: 10rem;
+    }
 }
 .chat-container .no-receiver{
    font-size: 10rem;
-   margin: 30rem;
+   padding: 20rem;
    font-weight: 600;
    text-align: center;
    color: #c6deda;

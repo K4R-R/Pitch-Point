@@ -10,7 +10,7 @@ const chatSocket = (io) => {
       });
 
       socket.on('newMessage', (message) => {
-         console.log('New message:', message);
+         // console.log('New message:', message);
          socket.broadcast.emit('messageReceived', message);
      });
    

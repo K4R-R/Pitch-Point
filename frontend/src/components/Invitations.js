@@ -8,10 +8,11 @@ const Invitations = () => {
   const [investorsInfo,setInvestorsInfo] = useState([]);
   const [loading,setLoading] = useState(true);
   const {user} = useAuthContext();
+  const apiUrl = process.env.REACT_APP_API_URL;
   
   useEffect(() => {
     const fetchConnections = async () => {
-      const res = await fetch('http://localhost:4000/api/connections',{
+      const res = await fetch(`${apiUrl}/api/connections`,{
           headers: {
               'Authorization':`Bearer ${user.token}`
           }
@@ -23,7 +24,7 @@ const Invitations = () => {
     }
 
     const fetchInvestorInfo = async () => {
-      const res = await fetch('http://localhost:4000/api/investor/all',{
+      const res = await fetch(`${apiUrl}/api/investor/all`,{
           headers: {
               'Authorization':`Bearer ${user.token}`
           }
@@ -37,7 +38,7 @@ const Invitations = () => {
     fetchConnections();
     fetchInvestorInfo();
 
-  },[user]);
+  },[user,apiUrl]);
 
   // console.log(connections);
 
@@ -60,7 +61,7 @@ const Invitations = () => {
 
   const handleConnectUpdate = async (status,_id) => {
     
-    const res = await fetch('http://localhost:4000/api/connections/update',{
+    const res = await fetch(`${apiUrl}/api/connections/update`,{
       method:'POST',
       body: JSON.stringify({status,_id}),
       headers: {

@@ -10,10 +10,11 @@ const Startups = () => {
    const [connections,setConnections] = useState(null);
    const [loading, setLoading] = useState(true);
    const {user} = useAuthContext();
+   const apiUrl = process.env.REACT_APP_API_URL;
 
    useEffect(() => {
       const fetchInvestPref = async () => {
-          const res = await fetch('http://localhost:4000/api/investor',{
+          const res = await fetch(`${apiUrl}/api/investor`,{
               headers: {
                 'Authorization':`Bearer ${user.token}`
               }
@@ -25,7 +26,7 @@ const Startups = () => {
       }
 
       const fetchBusinesses = async () => {
-         const res = await fetch('http://localhost:4000/api/founder',{
+         const res = await fetch(`${apiUrl}/api/founder`,{
             headers: {
                'Authorization':`Bearer ${user.token}`
             }
@@ -36,7 +37,7 @@ const Startups = () => {
       }
 
       const fetchConnections = async () => {
-         const res = await fetch('http://localhost:4000/api/connections',{
+         const res = await fetch(`${apiUrl}/api/connections`,{
             headers: {
                'Authorization':`Bearer ${user.token}`
             }
@@ -49,7 +50,7 @@ const Startups = () => {
       fetchInvestPref();
       fetchBusinesses();
       fetchConnections();
-   }, [user]);
+   }, [user,apiUrl]);
 
    if (loading) {
       return (
@@ -86,7 +87,7 @@ const Startups = () => {
 
    const handleConnect = async (business) => {
 
-      const res = await fetch('http://localhost:4000/api/connections',{
+      const res = await fetch(`${apiUrl}/api/connections`,{
          method:'POST',
          headers: {
             'Content-Type':'application/json',

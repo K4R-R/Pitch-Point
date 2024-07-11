@@ -9,10 +9,11 @@ const MyBlogs = () => {
    const [blogs,setBlogs] = useState(null);
    const {user} = useAuthContext();
    const navigate = useNavigate();
+   const apiUrl = process.env.REACT_APP_API_URL;
 
    useEffect(()=>{
       const fetchBlogs = async () => {
-         const res = await fetch('http://localhost:4000/api/blogs/',{
+         const res = await fetch(`${apiUrl}/api/blogs/`,{
             headers: {
                'Authorization':`Bearer ${user.token}`
             }
@@ -28,7 +29,7 @@ const MyBlogs = () => {
       }
 
       fetchBlogs();
-   },[user]);
+   },[user,apiUrl]);
 
    const handleBlogClick = (id) => {
       navigate(`/blogs/${id}`);

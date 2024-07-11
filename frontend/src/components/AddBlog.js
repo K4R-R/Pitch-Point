@@ -9,12 +9,13 @@ const AddBlog = () => {
   const [content, setContent] = useState('');
   const {user} = useAuthContext();
   const navigate = useNavigate();
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const handleAddBlog = async (e) => {
     e.preventDefault();
     const author = user.name;
 
-    const res = await fetch('http://localhost:4000/api/blogs/add',{
+    const res = await fetch(`${apiUrl}/api/blogs/add`,{
       method:'POST',
       body: JSON.stringify({title,author,content}),
       headers: {

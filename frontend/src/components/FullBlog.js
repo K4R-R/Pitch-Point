@@ -13,10 +13,11 @@ const FullBlog = () => {
    const [editedContent, setEditedContent] = useState('');
    const {user} = useAuthContext();
    const navigate = useNavigate();
+   const apiUrl = process.env.REACT_APP_API_URL;
 
    useEffect(()=>{
       const fetchBlog = async () => {
-         const res = await fetch(`http://localhost:4000/api/blogs/${id}`,{
+         const res = await fetch(`${apiUrl}/api/blogs/${id}`,{
             headers: {
                'Authorization':`Bearer ${user.token}`
             }
@@ -34,7 +35,7 @@ const FullBlog = () => {
       }
 
       fetchBlog();
-   },[id,user]);
+   },[id,user,apiUrl]);
 
    const handleEdit = (e) => {
       
@@ -51,7 +52,7 @@ const FullBlog = () => {
    const handleEditSubmit = async (e) => {
       e.preventDefault();
       
-      const res = await fetch(`http://localhost:4000/api/blogs/${id}`,{
+      const res = await fetch(`${apiUrl}/api/blogs/${id}`,{
          method:'PUT',
          body: JSON.stringify({title:editedTitle,author:blog.author,content:editedContent}),
          headers: {
@@ -69,7 +70,7 @@ const FullBlog = () => {
 
    const handleDelete = async (e) => {
 
-      const res = await fetch(`http://localhost:4000/api/blogs/${id}`,{
+      const res = await fetch(`${apiUrl}/api/blogs/${id}`,{
          method:'DELETE',
          headers: {
             'Authorization':`Bearer ${user.token}`
