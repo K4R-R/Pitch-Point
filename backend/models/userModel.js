@@ -47,7 +47,7 @@ userSchema.statics.signup = async function(role,name,email,contact,password) {
       throw Error('Not a valid Contact No.')
    }
    if(!validator.isStrongPassword(password)) {
-      throw Error('Password is not Strong');
+      throw Error('Password needs upper & lowercase, no. & special character');
    }
 
    const checkemail = await this.findOne({email});
