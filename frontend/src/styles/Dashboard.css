@@ -37,7 +37,7 @@
    outline: none;
    border-radius: 20rem;
    text-align: center;
-   padding: 2rem 0;
+   padding: 2rem;
    margin: 1% 0;
    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
@@ -89,14 +89,17 @@
    padding: 1rem;
    border: .5rem solid #008170;
    color: #008170;
+   background-color: #c6deda;
    border-radius: 20rem;
-   transition: background-color 0.3s ease, color 0.3s ease;
+   transition: background-color 0.3s ease, color 0.3s ease,transform .3s ease;
    min-width: 15rem;
 }
 .busiInfoForm button:hover{
    color: white;
    background-color: #008170;
+   transform: scale(1.05);
    transition-delay: .1s;
+
 }
 
 .invest-form{
@@ -134,11 +137,17 @@
    color: rgb(185, 185, 185);
    border-radius: 10rem;
 }
+.options-container div:hover{
+   background-color: #083636;
+}
 
 .options-container .selected{
    background-color: #008170;
    border-color: white;
    color: white;
+}
+.options-container .selected:hover{
+   background-color: #02483f;
 }
 
 .range-slider div{
@@ -178,11 +187,12 @@ input[type="range"]::-webkit-slider-runnable-track {
    border: .5rem solid #008170;
    color: #008170;
    border-radius: 20rem;
-   transition: background-color 0.3s ease, color 0.3s ease;
+   transition: background-color 0.3s ease, color 0.3s ease,transform .3s ease;
    min-width: 15rem;
 }
 .invest-form button:hover{
    color: white;
    background-color: #008170;
+   transform: scale(1.05);
    transition-delay: .1s;
 }
