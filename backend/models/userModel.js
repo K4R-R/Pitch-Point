@@ -44,10 +44,10 @@ userSchema.statics.signup = async function(role,name,email,contact,password) {
       throw Error('Not a valid Email');
    }
    if(contact<Math.pow(10,9) || contact>=Math.pow(10,10)) {
-      throw Error('Not a valid Contact No.')
+      throw Error('Not a valid Contact Number');
    }
    if(!validator.isStrongPassword(password)) {
-      throw Error('Password needs upper & lowercase, no. & special character');
+      throw Error('Password must include uppercase, lowercase, number, and special character.');
    }
 
    const checkemail = await this.findOne({email});
