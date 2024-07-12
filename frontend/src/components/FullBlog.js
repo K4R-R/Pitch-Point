@@ -86,7 +86,7 @@ const FullBlog = () => {
 
    if(!blog) {
       return (
-         <div>Loading...</div>
+         <div className='loading'><h1>Loading...</h1></div>
       );
    }
 
