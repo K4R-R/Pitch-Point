@@ -1,5 +1,5 @@
 .dashboard h1{
-   color: #008170;
+   color: #EEEEEE;
    font-weight: 400;
    margin: 1% 5%;
    margin-bottom: 3%;
@@ -13,7 +13,7 @@
    justify-content: space-around;
 }
 .dashboard h1 p{
-   background-color: white;
+   background-color: #1c407e;
    border-radius: 20rem;
    padding: 2rem 4rem;
    min-width: 40rem;
@@ -21,29 +21,29 @@
 }
 
 .founder-dash{
-   color: white;
+   color: #EEEEEE;
    text-align: center;
    margin-top: 5rem;
 }
 
 .founder-dash .startup-name input {
-   background-color: rgba(0, 0, 0, 0);
-   color: white;
+   background-color: #1c407e;
+   color: #EEEEEE;
    width: 70%;
    font-family: Beiruti,arial;
-   font-size: 4rem;
+   font-size: 5rem;
    font-weight: 500;
-   border: .5rem solid #008170;
+   border: none;
    outline: none;
    border-radius: 20rem;
    text-align: center;
    padding: 2rem;
    margin: 1% 0;
-   transition: background-color 0.3s ease, border-color 0.3s ease;
+   transition: background-color 0.3s ease,color 0.3s ease;
 }
 .founder-dash .startup-name input:focus, .founder-dash .startup-name input:hover {
-   background-color: #008170;
-   border-color: white;
+   background-color: #EB5B00;
+   color: #FFF;
 }
 
 .form-selects{
@@ -54,7 +54,7 @@
 
 .form-selects > *{
    background-color: rgba(0, 0, 0, 0);
-   color: white;
+   color: #EEEEEE;
    width: 30%;
    margin: 3% 5%;
    text-align: center;
@@ -62,21 +62,24 @@
    font-family: Beiruti,arial;
    font-size: 3.5rem;
    font-weight: 500;
-   border: .5rem solid #008170;
+   border: .5rem solid #1c407e;
    outline: none;
    border-radius: 20rem;
-   transition: background-color 0.3s ease, border-color 0.3s ease;
+   cursor: pointer;
+   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .form-selects option{
    font-size: 2.5rem;
    text-align: center;
 }
-.form-selects select:hover,select:focus{
-   cursor: pointer;
-   background-color: #008170;
-   border-color: white;
+.form-selects select:hover{
+   background-color: #1c407e;
    transition-delay: .1s;
+ }
+ .form-selects select:focus{
+   background-color: #EB5B00;
+   border-color: #EB5B00;
  }
 
 .busiInfoForm button{
@@ -87,23 +90,23 @@
    font-size: 3.5rem;
    font-weight: 500;
    padding: 1rem;
-   border: .5rem solid #008170;
-   color: #008170;
-   background-color: #c6deda;
+   border: .4rem solid #EEEEEE;
+   color: #EEEEEE;
+   background-color: #1c407e;
    border-radius: 20rem;
-   transition: background-color 0.3s ease, color 0.3s ease,transform .3s ease;
+   transition: background-color 0.3s ease, color 0.3s ease,transform .3s ease,border-color .3s ease;
    min-width: 15rem;
 }
 .busiInfoForm button:hover{
    color: white;
-   background-color: #008170;
-   transform: scale(1.05);
-   transition-delay: .1s;
+   background-color: #EB5B00;
+   border-color: #EB5B00;
+   transform: scale(1.07);
 
 }
 
 .invest-form{
-   color: white;
+   color: #EEEEEE;
    font-size: 3rem;
    display: flex;
    flex-direction: column;
@@ -133,21 +136,23 @@
    font-size: 3.5rem;
    margin: 2%;
    padding: 1rem 4rem;
-   border: .4rem solid grey;
-   color: rgb(185, 185, 185);
+   border: .4rem solid #1c407e;
+   color: #2854a0;
    border-radius: 10rem;
 }
 .options-container div:hover{
-   background-color: #083636;
+   background-color: #1c407e;
+   color: #EEEEEE;
 }
 
 .options-container .selected{
-   background-color: #008170;
-   border-color: white;
-   color: white;
+   background-color: #EB5B00;
+   border-color: #EB5B00;
+   color: #EEEEEE;
 }
 .options-container .selected:hover{
-   background-color: #02483f;
+   background-color: #f1734c;
+   border-color: #f1734c;
 }
 
 .range-slider div{
@@ -159,7 +164,7 @@
    font-family: Beiruti,arial;
    font-size: 4rem;
    text-align: center;
-   color: white;
+   color: #EEEEEE;
    padding: 1rem;
    border-radius: 10rem;
 }
@@ -170,7 +175,7 @@ input[type="range"] {
 }
 input[type="range"]::-webkit-slider-runnable-track {
    cursor: pointer;
-   background: white;
+   background: #EEEEEE;
    height: 2.6rem;
    border-radius: 5rem;
    padding: .2rem;
@@ -184,15 +189,16 @@ input[type="range"]::-webkit-slider-runnable-track {
    font-size: 3.5rem;
    font-weight: 500;
    padding: 1rem;
-   border: .5rem solid #008170;
-   color: #008170;
+   border: .4rem solid #EEEEEE;
+   color: #EEEEEE;
+   background-color: #1c407e;
    border-radius: 20rem;
-   transition: background-color 0.3s ease, color 0.3s ease,transform .3s ease;
+   transition: background-color 0.3s ease, color 0.3s ease,transform .3s ease,border-color .3s ease;
    min-width: 15rem;
 }
 .invest-form button:hover{
-   color: white;
-   background-color: #008170;
-   transform: scale(1.05);
-   transition-delay: .1s;
+   color: #EEEEEE;
+   background-color: #EB5B00;
+   border-color: #EB5B00;
+   transform: scale(1.07);
 }

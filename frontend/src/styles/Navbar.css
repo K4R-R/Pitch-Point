@@ -1,11 +1,14 @@
 body {
-   background-color: #161a1a;
+   background: url('../images/loginbg2.jpg') no-repeat center center fixed;
+   background-size: cover;
+   background-attachment: fixed;
+   background-color: #1c407e;
 }
 
 .navbar {
    border: .5rem solid #EEEEEE;
    margin: 1%;
-   background-color: #00433a;
+   background-color: #1c407e;
    border-radius: 20rem;
    display: flex;
    flex-wrap: wrap;
@@ -28,16 +31,16 @@ body {
    justify-content: left;
 }
 .navlinks a{
-   color: white;
+   color: #EEEEEE;
    text-decoration: none;
-   padding: .5rem 2rem;
+   padding: .5rem 2rem;   
+   font-weight: 500;
    margin: 0 2rem;
 }
 .navlinks .cur-location{
-   background-color: white;
+   background-color: #EEEEEE;
    border-radius: 10rem;
-   font-weight: 500;
-   color: #008170;
+   color: #1c407e;
 }
 .profile{
    flex: 1;
@@ -48,6 +51,7 @@ body {
 }
 .profile span{
    padding-right: 2rem;
+   font-weight: 500;
 }
 .profile button{
    height: 10rem;
@@ -56,6 +60,6 @@ body {
    padding: .5rem;
    background-color: rgba(0, 0, 0, 0);
    border: none;
-   color: white;
+   color: #EEEEEE;
    cursor: pointer;
 }

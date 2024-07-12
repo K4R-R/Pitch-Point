@@ -5,12 +5,12 @@
 .message-window > *{
    display: flex;
    font-size: 3.5rem;
-   color: white;
+   color: #EEEEEE;
 }
 
 .user-container{
    margin-right: 1%;
-   border: .5rem solid white;
+   background-color: #060026b4;
    border-radius: 3rem;
    padding: 1rem 2rem;
    height: 70vh;
@@ -19,25 +19,30 @@
    flex-direction: column;
 }
 .user-container .connects{
-   border: .5rem solid grey;
-   color: rgb(175, 175, 175);
+   border: .4rem solid #1c407e;
+   color: #2854a0;
    border-radius: 20rem;
    padding: 1rem;
    margin: 1rem 0;
    text-align: center;
    cursor: pointer;
+   transition: background-color .3s ease,color .3s ease,border-color .3s ease;
 }
-.user-container .receiver{
-   background-color: #008170;
-   border-color: white;
-   color: white;
+.user-container .connects:hover{
+   background-color: #1c407e;
+   color: #EEEEEE;
+}
+.message-window .user-container .receiver{
+   background-color: #EB5B00;
+   border-color: #EB5B00;
+   color: #EEEEEE;
 }
 
 .chat-container{
    flex: 4;
-   border: .5rem solid white;
-   border-radius: 3rem;
-   padding: 1rem .5rem;
+   background-color: #060026b4;
+   border-radius: 2rem;
+   padding: 1rem 1rem;
    height: 70vh;
    display: flex;
    align-items: center;
@@ -47,7 +52,7 @@
    font-size: 8rem;
    font-weight: 600;
    text-align: center;
-   color: #c6deda;
+   color: #EEEEEE;
 }
 .chat-container .chats{
    width: 100%;
@@ -56,15 +61,13 @@
    padding: 0 1rem;
    flex-direction: column;
    overflow: auto;
-   /* background-color: lime; */
    border-top-left-radius: 4rem;
    border-top-right-radius: 4rem;
    &::-webkit-scrollbar {
       width: 1.5rem;
     }
     &::-webkit-scrollbar-thumb {
-      background: #008170;
-      border: 0.2rem solid white;
+      background: #1c407e;
       border-radius: 10rem;
     }
 }
@@ -78,19 +81,19 @@
    text-align: right;
 }
 .send-message p{
-   background-color: #008170;
+   background-color: #EB5B00;
    border-bottom-right-radius: 0;
 }
 .chats .received-message{
    padding: 2rem 0;
 }
 .received-message p{
-   background-color: gray;
+   background-color: #1c407e;
    border-bottom-left-radius: 0;
 }
 
 .input-area form{
-   border: .5rem solid white;
+   border: .5rem solid #1c407e;
    border-radius: 20rem;
    height: 10vh;
    width: 100%;
@@ -105,22 +108,32 @@
    font-size: 4rem;
    padding: 0 3rem;
    font-weight: 500;
-   color: #008170;
-   background-color: #c6deda;
+   color: #1c407e;
+   background-color: #EEEEEE;
    border-top-left-radius: 10rem;
    border-bottom-left-radius: 10rem;
    transition: background-color .3s ease;
 }
 .input-area input:focus,.input-area input:hover{
-   background-color: #acc4c0;
+   background-color: #CCCCCC;
 }
 .input-area button{
    flex: 1;
    border-top-right-radius: 10rem;
    border-bottom-right-radius: 10rem;
    border: none;
-   background-color: #008170;
-   font-size: 4rem;
+   background-color: #1c407e;
+   font-family: Beiruti,arial;
+   font-size: 5rem;
    font-weight: 600;
-   color: white;
+   color: #EEEEEE;
+   cursor: pointer;
+   transition: background-color .3s ease;
+}
+.input-area button:hover{
+   background-color: #EB5B00;
+}
+.input-area button i{
+   font-size: 4rem;
+   padding-right: 1rem;
 }

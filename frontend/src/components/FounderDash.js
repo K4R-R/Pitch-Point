@@ -4,7 +4,8 @@ import { useAuthContext } from '../hooks/useAuthContext';
 
 const FounderDash = () => {
 
-   const [startupName,setStartupName] = useState('')
+   const [startupName,setStartupName] = useState('');
+   const [loading, setLoading] = useState(true);
    const [industry, setIndustry] = useState('STARTUP INDUSTRY');
    const [investment,setInvestment] = useState('INVESTMENT STAGE');
    const [production,setProduction] = useState('PRODUCTION STAGE');
@@ -30,7 +31,7 @@ const FounderDash = () => {
             setProduction(business.productionStage);
             setCustomer(business.customerGroup);
          }
-
+         setLoading(false);
       }
 
       fetchBusiness();
@@ -66,6 +67,12 @@ const FounderDash = () => {
       } else {
          alert('Error in adding Business Info');
       }
+   }
+
+   if(loading) {
+      return (
+         <div className='loading'><h1>Loading...</h1></div>
+      )
    }
    
    return (

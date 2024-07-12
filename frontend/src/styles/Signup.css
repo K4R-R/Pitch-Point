@@ -9,25 +9,25 @@ html, body {
    display: flex;
    align-items: center;
    justify-content: center;
-   background: url('../images/loginbg1.jpg') no-repeat center center fixed;
+   background: url('../images/loginbg5.jpg') no-repeat center center fixed;
    background-size: cover;
-   color: white;
+   color: #EEEEEE;
 }
 
    .signup-form {
       margin: auto;
       width: 70vw;
       height: 75vh;
-      background-color: rgba(0, 0, 0, .3);
+      background-color: #060026a2;
       display: flex;
       flex-wrap: wrap;
-      border-radius: 10rem;
+      border-radius: 1rem;
    }
 
 .site-name {
    flex: 1;
    min-width: 300px;
-   margin: auto;
+   margin-top: 23vh;
    padding-left: 10rem;
 }
 .site-name h1{
@@ -42,7 +42,10 @@ html, body {
    font-size: 4rem;
    margin-right: 4rem;
    padding: 0rem;
-   color: white;
+   color: #EEEEEE;
+}
+.social-medias a:hover{
+   color: #EB5B00;
 }
 
 .signup {
@@ -77,17 +80,15 @@ html, body {
    font-family: Beiruti,arial;
    border: none;
    border-radius: 100rem;
-   color: #005449;
+   color: #1c407e;   
 }
 .roles > *:hover{
-   background-color: #c6deda;
-   border: .3rem solid white;
-   color: #005449;
+   background-color: #FFE6C7;
 }
 .roles .selected-role{
-   background-color: #005449;
-   border: .3rem solid white;
-   color: white;
+   background-color: #EB5B00;
+   border: .3rem solid #EB5B00;
+   color: #EEEEEE;
 }
 
 .input-field{
@@ -106,17 +107,17 @@ html, body {
    border: .3rem solid rgba(0, 0, 0, 0);
    border-radius: 100rem;
    background-color: rgba(0, 0, 0, 0);
-   color: white;
+   color: #EEEEEE;
    outline: none;
 }
 .input-field>input:hover{
-   border: .3rem solid rgb(166, 166, 166);
+   border: .3rem solid #EEEEEE;
 }
 .input-field>input:focus{
-   border: .3rem solid white;
+   border: .3rem solid #EB5B00;
 }
 .login-field > input{
-   height: 70%;
+   height: 60%;
 }
 .login-field{
    margin-top: 5rem;
@@ -127,26 +128,28 @@ html, body {
    margin: auto;
    margin-top: 3rem;
    width: 20rem;
-   height: 5rem;
-   background-color: white ;
+   padding: .5rem 0;
+   background-color: #1c407e ;
    border-radius: 4rem;
-   border: .3rem solid white;
-   color: #005449;
+   border: .3rem solid #EEEEEE;
+   outline: none;
+   color: #EEEEEE;
    font-family: Beiruti,arial;
-   font-size: 3.5rem;
+   font-size: 4rem;
    font-weight: 500;
-   transition: background-color 0.3s ease, color 0.3s ease;
+   transition: background-color 0.3s ease, color 0.3s ease, border-color .3s ease;
 }
-.submit-btn:hover{
-   background-color: #005449;
-   color: white;
+.submit-btn:hover,.submit-btn:focus{
+   background-color: #EB5B00;
+   color: #EEEEEE;
+   border-color: #EB5B00;
 }
 .login-btn{
    margin-top: 5rem;
 }
 
 .error{
-   color: red;
+   color: rgb(255, 0, 0);
    text-align: center;
    margin-top: 2rem;
 }
@@ -155,7 +158,30 @@ html, body {
    margin-top: 2rem;
 }
 .not-error a{
-   color: white;
+   color: #EEEEEE;
    text-decoration: none;
    padding-left: 1rem;
+}
+
+.pass-input-wrapper {
+   position: relative;
+}
+
+.show-password{
+   position: absolute;
+   right: 4%;
+   background-color: transparent;
+   cursor: pointer;
+   border: none;
+   color: #EB5B00;
+   font-size: 2.5rem;
+}
+.show-password:hover{
+   color: #EEEEEE;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"] {
+  -webkit-appearance: none;
 }

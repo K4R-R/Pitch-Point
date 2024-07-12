@@ -3,10 +3,10 @@
    flex-direction: column;
 }
 .invite-card{
-   background-color: #008170;
+   background-color: #EB5B00;
    color: white;
    font-size: 3rem;
-   padding: 1rem 1rem 1rem 4rem ;
+   padding: 2rem 2rem 2rem 4rem ;
    margin: 1% 2%;
    display: flex;
    justify-content: space-between;
@@ -48,6 +48,6 @@
 }
 .btns button:hover{
    transform: scale(1.1);
-   background-color: white;
-   color: #008170;
+   background-color: #EEEEEE;
+   color: #1c407e;
 }

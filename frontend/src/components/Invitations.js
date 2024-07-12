@@ -88,7 +88,7 @@ const Invitations = () => {
       return (
         <div key={connect._id} className="invite-card">
           <div className="details">
-            <h2>{connect.investorName}</h2>
+            <h2>{connect.investorName.toUpperCase()}</h2>
             <p>INVESTOR TYPE - {investor.investorType} </p>
             <p>INVESTMENT RANGE - <span>&#8377;</span> {investor.investmentRange} /- </p>
           </div>

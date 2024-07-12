@@ -10,6 +10,8 @@ const Signup = () => {
    const [email,setEmail] = useState('');
    const [contact,setContact] = useState('');
    const [password,setPassword] = useState('');
+   const [showPass, setShowPass] = useState(false);
+   const [onPassInput, setOnPassInput] = useState(false);
    const {signup, error, isLoading } = useSignup();
 
    const handleSignup = async (e) => {
@@ -17,6 +19,11 @@ const Signup = () => {
       //console.log(role,name,email,contact,password);
 
       await signup(role,name,email.toLowerCase(),contact,password);
+   }
+
+   const handleShowPass = (e) => {
+      e.preventDefault();
+      setShowPass(!showPass);
    }
 
   return (
@@ -70,14 +77,22 @@ const Signup = () => {
                />
             </div>
 
-            <div className='input-field'>
+            <div className='input-field pass-input-wrapper'>
                <label>Password:</label>
                <input 
-                  type='password'
+                  type={showPass ? 'text':'password'}
                   onChange={(e) => setPassword(e.target.value)}
                   value={password}
                   placeholder='Enter Password'
+                  onFocus={()=>setOnPassInput(true)}
+                  onBlur={()=>setOnPassInput(false)}
                />
+               {onPassInput && (<div 
+                  className='show-password' 
+                  type='button' onMouseDown={handleShowPass}
+               >
+                  {showPass ? <i class="fa-solid fa-eye"></i>:<i class="fa-solid fa-eye-slash"></i>}
+               </div>)}
             </div>
 
             <div><button type='submit' className='submit-btn' disabled={isLoading}>Sign Up</button></div>

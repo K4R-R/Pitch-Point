@@ -6,6 +6,7 @@ import InvestorFormPart from './InvestorFormPart';
 const InvestorDash = () => {
 
   const [type,setType] = useState('');
+  const [loading, setLoading] = useState(true);
   const [range,setRange] = useState(0);
   const [industry, setIndustry] = useState([]);
   const [investment,setInvestment] = useState([]);
@@ -39,7 +40,7 @@ const InvestorDash = () => {
           setProduction(investPref.productionStage);
           setCustomer(investPref.customerGroup);
         }
-
+        setLoading(false);
     }
 
     fetchInvestPref();
@@ -81,6 +82,12 @@ const InvestorDash = () => {
         alert('Error in adding Investor Preferences');
     }
   };
+
+  if(loading) {
+      return (
+        <div className='loading'><h1>Loading...</h1></div>
+      )
+  }
 
   return (
     <div>

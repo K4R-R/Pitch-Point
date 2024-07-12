@@ -1,13 +1,13 @@
 .add-blog{
-   color: white;
+   color: #EEEEEE;
    font-size: 3rem;
    text-align: center;
    margin-top: 4rem;
 }
 
 .add-blog h1{
-   background-color: white;
-   color: #008170;
+   background-color: #1c407e;
+   color: #EEEEEE ;
    font-weight: 500;
    display: inline;
    padding: 1rem 4rem;
@@ -23,10 +23,11 @@
    font-family: Beiruti,arial;
    font-weight: 600;
    padding: 2rem;
-   border: .4rem solid #008170;
+   border: .4rem solid #EB5B00;
+   outline: none;
    border-radius: 20rem;
-   color: #008170;
-   background-color: #c6deda;
+   color: #1c407e;
+   background-color: #FFE6C7;
 }
 
 .add-blog textarea{
@@ -34,18 +35,20 @@
    height: 45vh;
    font-family: Beiruti,arial;
    font-size: 3rem;
-   color: #008170;
-   border: .4rem solid #008170;
+   color: #1c407e;
+   font-weight: 500;
+   border: .4rem solid #EB5B00;
    border-radius: 3rem;
+   outline: none;
    padding: 2rem;
-   background-color: #c6deda;
+   background-color: #FFE6C7;
    &::-webkit-scrollbar {
-      width: 2rem;
+      width: 1.5rem;
     }
     &::-webkit-scrollbar-thumb {
-      background: #008170;
-      border: .2rem solid white;
-      border-radius: 2rem; 
+      background: #EB5B00;
+      border: .2rem solid #FFE6C7;
+      border-radius: 1rem; 
     }
 }
 
@@ -56,16 +59,16 @@
    font-family: Beiruti,arial;
    font-size: 3.5rem;
    font-weight: 600;
-   border: .4rem solid #008170;
-   color: #008170;
-   background-color: #c6deda;
+   border: .4rem solid #EEEEEE;
+   color: #EEEEEE;
+   background-color: #1c407e;
    border-radius: 20rem;
    transition: background-color 0.3s ease, color 0.3s ease,transform .3s ease;
    min-width: 15rem;
 }
 .add-blog button:hover{
-   background-color: #008170;
-   color: white;
+   background-color: #EB5B00;
+   color: #EEEEEE;
    transition-delay: .1s;
    transform: scale(1.1);
 }

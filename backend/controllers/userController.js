@@ -41,7 +41,11 @@ const signupUser = async (req,res) => {
    }
 }
 
+const upTime = (req,res) => {
+   res.status(200).json({message:'function for keeping backend active'})
+}
+
 
 module.exports = {
-   signupUser,loginUser
+   signupUser,loginUser,upTime
 }

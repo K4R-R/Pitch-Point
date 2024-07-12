@@ -1,5 +1,5 @@
 .no-pref h1{
-   color: white;
+   color: #EEEEEE;
    font-size: 10rem;
    text-align: center;
    margin: 10%;
@@ -14,17 +14,17 @@
    gap: 2%;
 }
 .startup-card{
-   background-color: #008170;
+   background-color: #EB5B00;
    padding: 4rem;
    display: flex;
    flex-direction: column;
    border-radius: 4rem;
-   max-width: 50%;
+   max-width: 500px;
    transition: transform 0.3s ease;
 }
 .startup-card h2{
-   background-color: #c6deda;
-   color: #008170;
+   background-color: #FFE6C7;
+   color: #EB5B00;
    margin: 0;
    margin-bottom: 5%;
    padding: 2rem;
@@ -39,7 +39,7 @@
    margin: 2% 2%;
    font-size: 2.7rem;
    font-weight: 500;
-   color: white;
+   color: #EEEEEE;
    display: flex;
    justify-content: space-between;
 }
@@ -48,8 +48,8 @@
 .startup-card:hover{
    transform: scale(1.05);
 }
-.startup-card:hover div{
-   background-color: #008170;
+.startup-card:hover h2{
+   background-color: #EB5B00;
    color: white;
    transition-delay: .1s;
 }
@@ -65,9 +65,8 @@
    font-size: 3rem;
    font-weight: 600;
    padding: 1rem 3rem;
-   border: .4rem solid #008170;
-   color: #008170;
-   background-color: #c6deda;
+   color: #EB5B00;
+   background-color: #FFE6C7;
    border-radius: 20rem;
    cursor: pointer;
    transition: transform 0.3s ease;

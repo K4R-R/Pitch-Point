@@ -14,9 +14,7 @@ router.post('/login',userController.loginUser);
 // signup page
 router.post('/signup',userController.signupUser);
 
-router.use(requireAuth);
-router.get('/example',() => {
-   console.log('example');
-})
+// keeps website active
+router.get('/',userController.upTime);
 
 module.exports=router;
