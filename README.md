@@ -1,2 +1,2 @@
 
-This project is deployed on render [Deploy link](https://pitch-point.netlify.app/login).
+This project is deployed on netlify [Deploy link](https://pitch-point.netlify.app/login).
