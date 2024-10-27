@@ -14,15 +14,15 @@ html, body {
    color: #EEEEEE;
 }
 
-   .signup-form {
-      margin: auto;
-      width: 70vw;
-      height: 75vh;
-      background-color: #060026a2;
-      display: flex;
-      flex-wrap: wrap;
-      border-radius: 1rem;
-   }
+.signup-form {
+   margin: auto;
+   width: 70vw;
+   height: 75vh;
+   background-color: #060026a2;
+   display: flex;
+   flex-wrap: wrap;
+   border-radius: 1rem;
+}
 
 .site-name {
    flex: 1;
@@ -184,4 +184,37 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"] {
   -webkit-appearance: none;
+}
+
+@media (max-width: 500px) {
+   /* Your styles here */
+   .signup-form{
+      width: 90vw;
+      height: 80vh;
+   }
+   .site-name{
+      margin-top: 5vh;
+      padding: 0;
+   }
+   .site-name h1{
+      font-size: 7rem;
+      text-align: center;
+   }
+   .site-name p{
+      font-size: 3rem;
+      text-align: center;
+   }
+   .social-medias{
+      text-align: center;
+   }
+   .social-medias a{
+      margin: 0 5rem;
+      font-size: 5rem;
+   }
+   .signup > * {
+      font-size: 2.5rem;
+   }
+   .input-field > input{
+      font-size: 2.5rem;
+   }
 }

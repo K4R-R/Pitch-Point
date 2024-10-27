@@ -114,7 +114,7 @@ const InvestorDash = () => {
         <div className='options-container range-slider'>
           <h3>Investment Range</h3>
           <input type="range" min={0} max={10000000} value={range} onChange={(e)=>setRange(e.target.value)} />
-          <div><input type="number" value={range} onChange={(e)=>setRange(e.target.value)}/></div>
+          <div><span className='rupee-symbol'> &#8377; </span><input type="number" value={range} onChange={(e)=>setRange(e.target.value)}/></div>
         </div>
 
         <button type='submit'>Submit</button>

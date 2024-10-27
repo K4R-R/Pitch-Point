@@ -63,7 +63,7 @@ const Login = () => {
                   className='show-password' 
                   onMouseDown={handleShowPass}
                >
-                  {showPass ? <i class="fa-solid fa-eye"></i>:<i class="fa-solid fa-eye-slash"></i>}
+                  {showPass ? <i className="fa-solid fa-eye"></i>:<i className="fa-solid fa-eye-slash"></i>}
                </div>)}
             </div>
 

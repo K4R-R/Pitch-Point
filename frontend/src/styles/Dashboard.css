@@ -14,7 +14,7 @@
 }
 .dashboard h1 p{
    background-color: #1c407e;
-   border-radius: 20rem;
+   border-radius: 10rem;
    padding: 2rem 4rem;
    min-width: 40rem;
    margin-top: 1%;
@@ -163,6 +163,7 @@
    background-color: rgba(0, 0, 0, 0);
    font-family: Beiruti,arial;
    font-size: 4rem;
+   outline: none;
    text-align: center;
    color: #EEEEEE;
    padding: 1rem;
@@ -201,4 +202,29 @@ input[type="range"]::-webkit-slider-runnable-track {
    background-color: #EB5B00;
    border-color: #EB5B00;
    transform: scale(1.07);
+}
+.rupee-symbol {
+   color: #EEEEEE;
+   font-size: 4rem;
+   position: relative;
+   left: 10rem;
+}
+
+@media (max-width: 500px) {
+   .dashboard h1 p{
+      width: 100%;
+      border-radius: 5rem;
+      font-size: 4rem;
+   }
+}
+
+@media (max-width: 500px) {
+   /* Your styles here */
+   .form-selects{
+      flex-direction: column;
+      align-items: center;
+   }
+   .form-selects select{
+      width: 70%;
+   }
 }
