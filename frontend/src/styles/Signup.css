@@ -216,6 +216,8 @@ input[type="number"] {
    }
    .input-field > input{
       font-size: 3rem;
-      padding: 1rem;
+   }
+   .login-field > input{
+      height: 80%;
    }
 }
